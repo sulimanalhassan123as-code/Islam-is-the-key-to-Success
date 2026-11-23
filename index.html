@@ -1,51 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic Google</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Islam is the Key to Success</title>
+<meta name="description" content="A clear, calm introduction to Islam: the testimony of faith, the five pillars, the six articles of faith, and where to start reading the Qur'an.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b1220'/%3E%3Cpath d='M24 8l3.6 9.4L37 21l-9.4 3.6L24 34l-3.6-9.4L11 21l9.4-3.6z' fill='%2312b981'/%3E%3C/svg%3E">
+<style>
+:root{
+  --emerald:#12b981; --gold:#d8b36a; --bg:#070e17; --bg2:#0b1420;
+  --panel:rgba(18,26,40,.72); --line:rgba(255,255,255,.09);
+  --txt:#eaf1f8; --txt2:#9fb0c4;
+  --arabic:"Traditional Arabic","Scheherazade New","Noto Naskh Arabic",Amiri,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 var(--sans);
+  background-image:
+    radial-gradient(900px 520px at 78% -8%,rgba(18,185,129,.16),transparent 60%),
+    radial-gradient(700px 460px at 8% 4%,rgba(216,179,106,.10),transparent 62%);
+}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+header{padding:22px 0 6px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem}
+nav a{color:var(--txt2);text-decoration:none}
+nav a:hover{color:var(--emerald)}
+.hero{padding:54px 0 30px;text-align:center}
+.bismillah{font-family:var(--arabic);font-size:1.5rem;color:var(--gold);margin:0 0 14px}
+h1{font-size:clamp(30px,7vw,50px);line-height:1.08;letter-spacing:-.03em;margin:0 0 14px}
+h1 em{font-style:normal;color:var(--emerald)}
+.lede{color:var(--txt2);max-width:620px;margin:0 auto 26px}
+.shahada{
+  background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px 22px;
+  backdrop-filter:blur(8px);max-width:720px;margin:0 auto;
+}
+.ar{font-family:var(--arabic);font-size:clamp(1.35rem,4.6vw,2rem);line-height:2;color:#fff;direction:rtl;margin:0 0 12px}
+.tr{color:var(--txt2);font-size:.95rem;margin:0}
+section{padding:34px 0}
+h2{font-size:1.35rem;letter-spacing:-.02em;margin:0 0 6px}
+.sub{color:var(--txt2);margin:0 0 18px;font-size:.92rem}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;backdrop-filter:blur(6px)}
+.card h3{margin:0 0 6px;font-size:1rem}
+.card p{margin:0;color:var(--txt2);font-size:.9rem}
+.num{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;border-radius:8px;background:rgba(18,185,129,.14);color:var(--emerald);font-weight:700;font-size:.8rem;margin-bottom:8px}
+blockquote{margin:0;padding:16px 18px;border-left:3px solid var(--emerald);background:rgba(18,185,129,.06);border-radius:0 12px 12px 0;color:#dfe9f5}
+blockquote cite{display:block;margin-top:8px;color:var(--txt2);font-size:.8rem;font-style:normal}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.step b{color:var(--emerald)}
+.links{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+a.res{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
+a.res:hover{border-color:var(--emerald);transform:translateY(-2px)}
+a.res strong{display:block;font-size:.95rem}
+a.res span{color:var(--txt2);font-size:.82rem}
+footer{padding:34px 0 46px;color:var(--txt2);font-size:.82rem;border-top:1px solid var(--line);margin-top:20px}
+footer a{color:var(--emerald)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
-
-    <!-- This is the container for the animated "disco light" border -->
-    <div class="border-container">
-        <div class="animated-border"></div>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><path d="M24 4l4.8 12.4L41 21l-12.2 4.6L24 38l-4.8-12.4L7 21l12.2-4.6z" fill="url(#g)"/></svg>
+      Islam is the Key
     </div>
+    <nav>
+      <a href="#pillars">Pillars</a>
+      <a href="#faith">Faith</a>
+      <a href="#why">Why Islam</a>
+      <a href="#start">Start here</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
 
-    <div class="content">
-        <header>
-            <div class="logo">Islamic Google</div>
-        </header>
-
-        <main>
-            <section class="search-section">
-                <h1>Your Guide to Authentic Islamic Knowledge</h1>
-                
-                <div class="search-bar-container">
-                    <form id="search-form">
-                        <input type="text" id="search-input" placeholder="Search for Islamic topics..." class="search-input" required>
-                        <button type="submit" class="search-button">Search</button>
-                    </form>
-                </div>
-
-                <p id="loading-message" class="loading-message"></p>
-
-                <div id="search-results-container"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>Developed by: Suleiman Alhassan ( Suleiman Alhassan)</p>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:sulimanalhassan.123.as@gmail.com">sulimanalhassan.123.as@gmail.com</a></p>
-                <p>WhatsApp: +233599931348</p>
-            </div>
-        </footer>
+  <section class="hero">
+    <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <h1>Islam is the key.<br><em>Success follows the key.</em></h1>
+    <p class="lede">A calm, plain introduction: what Muslims believe, what is asked of them, and how to begin reading the Qur'an today without paying anybody.</p>
+    <div class="shahada">
+      <p class="ar">لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ</p>
+      <p class="tr">“There is no god but Allah, and Muhammad is the Messenger of Allah.” This single sentence is what makes a person a Muslim: a testimony said with understanding and intent.</p>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="pillars">
+    <h2>The five pillars</h2>
+    <p class="sub">The framework every Muslim builds a life on.</p>
+    <div class="grid">
+      <div class="card"><span class="num">1</span><h3>Shahādah</h3><p>The testimony that there is no god but Allah and Muhammad is His Messenger.</p></div>
+      <div class="card"><span class="num">2</span><h3>Ṣalāh</h3><p>Five daily prayers: Fajr, Dhuhr, Asr, Maghrib and Isha.</p></div>
+      <div class="card"><span class="num">3</span><h3>Zakāh</h3><p>An annual 2.5% of qualifying savings given to those in need.</p></div>
+      <div class="card"><span class="num">4</span><h3>Ṣawm</h3><p>Fasting the month of Ramadan from dawn to sunset.</p></div>
+      <div class="card"><span class="num">5</span><h3>Ḥajj</h3><p>The pilgrimage to Makkah once in a lifetime, for those able.</p></div>
+    </div>
+  </section>
 
+  <section id="faith">
+    <h2>The six articles of faith</h2>
+    <p class="sub">What a Muslim believes in the heart.</p>
+    <div class="grid">
+      <div class="card"><h3>Allah</h3><p>One God, without partner, child or equal. The Most Merciful.</p></div>
+      <div class="card"><h3>The angels</h3><p>Created beings who carry out Allah's command, including Jibrīl who brought revelation.</p></div>
+      <div class="card"><h3>The books</h3><p>Including the Qur'an, the final revealed book, preserved in its original Arabic.</p></div>
+      <div class="card"><h3>The messengers</h3><p>From Adam through Nūḥ, Ibrāhīm, Mūsā and ʿĪsā, ending with Muhammad ﷺ.</p></div>
+      <div class="card"><h3>The Last Day</h3><p>Resurrection, accounting, and the final destination of Paradise or Fire.</p></div>
+      <div class="card"><h3>Divine decree</h3><p>Nothing happens outside Allah's knowledge and will, and people still choose and are accountable.</p></div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why it holds</h2>
+    <p class="sub">Three claims Islam makes, and where to check them.</p>
+    <div class="steps">
+      <div class="step"><b>1.</b><div><strong>One God, no intermediaries.</strong> No priest stands between you and your Creator, and no fee is charged for forgiveness.<blockquote>“And your Lord says: call upon Me, I will respond to you.”<cite>Qur'an 40:60</cite></blockquote></div></div>
+      <div class="step"><b>2.</b><div><strong>The Qur'an is preserved and testable.</strong> One text, one recitation tradition, memorised by millions. Read it and judge for yourself.<blockquote>“Indeed, it is We who sent down the Qur'an, and indeed, We will be its guardian.”<cite>Qur'an 15:9</cite></blockquote></div></div>
+      <div class="step"><b>3.</b><div><strong>The Prophet's life is documented.</strong> His words and actions were recorded with chains of narration, so you can examine them instead of taking anyone's word.<blockquote>“Indeed in the Messenger of Allah you have an excellent example.”<cite>Qur'an 33:21</cite></blockquote></div></div>
+    </div>
+  </section>
+
+  <section id="start">
+    <h2>Start here, in this order</h2>
+    <p class="sub">No money, no membership, no middleman.</p>
+    <div class="steps">
+      <div class="step"><b>1.</b><div><strong>Read a short surah with its meaning.</strong> Begin with Al-Fātiḥah, then Al-Ikhlāṣ. Understanding first, memorising later.</div></div>
+      <div class="step"><b>2.</b><div><strong>Learn the prayer.</strong> Five prayers, short and fixed. Learn one rak'ah properly before adding the rest.</div></div>
+      <div class="step"><b>3.</b><div><strong>Ask a real teacher.</strong> Find a local imam or a recognised institution. For rulings on your own situation, ask a qualified scholar, not a search engine.</div></div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2>Trusted resources</h2>
+    <p class="sub">Free, established, and each links to its own original source.</p>
+    <div class="links">
+      <a class="res" href="https://quran.com" target="_blank" rel="noopener"><strong>Qur'an.com</strong><span>Arabic text, translations and recitation.</span></a>
+      <a class="res" href="https://sunnah.com" target="_blank" rel="noopener"><strong>Sunnah.com</strong><span>Hadith collections with numbering you can cite.</span></a>
+      <a class="res" href="https://islamhouse.com/en" target="_blank" rel="noopener"><strong>IslamHouse</strong><span>Free books and guides in many languages.</span></a>
+      <a class="res" href="https://yaqeeninstitute.org" target="_blank" rel="noopener"><strong>Yaqeen Institute</strong><span>Research-based answers to common questions.</span></a>
+      <a class="res" href="https://seekersguidance.org" target="_blank" rel="noopener"><strong>SeekersGuidance</strong><span>Free courses and reliable answers from scholars.</span></a>
+      <a class="res" href="https://www.alquran.cloud" target="_blank" rel="noopener"><strong>AlQuran Cloud</strong><span>Open API used by this project for Qur'an text.</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Never Hide Tech, Accra. Nothing on this page is a fatwa, and no donations are collected here. For your own situation, ask a qualified scholar.</p>
+  </footer>
+</div>
 </body>
 </html>
